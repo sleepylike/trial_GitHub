@@ -52,6 +52,8 @@ First Git trial
 - vim .git/config
 
   `查看配置文件`
+  ` - vim弹框怎么退出? - 如果是输出状态，首先按Esc键退出输入状态，然后按Shift + “;”，再输入q!或wq!（不保存改动，wq!是保存文件的写入修改）退出。`  
+  [原博客地址](https://www.cnblogs.com/fengxiongZz/p/8916403.html)
 
 - git status
 
@@ -79,8 +81,10 @@ First Git trial
 
 - 推送出去：git push -u origin main
 
-- 修改完成后提交：git commit
+- 基本顺序：git add / git restore --staged > git commit -m "版本信息" > git push
+
+  `如遇fatal: unable to access '': Failed to connect to github.com port 443 after 21077 ms: Timed out，考虑取消这两个全局代理：git config --global --unset http.proxy; git config --global --unset https.proxy`
   
-- 如多人同时处理同一个仓库，提交之前最好先拉一下：git pull
+- 如多人同时处理同一个仓库，推之前最好先拉一下：git pull
 
 - 把仓库转移到组织当中：Settings > Transfer Repository
